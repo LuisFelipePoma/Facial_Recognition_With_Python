@@ -21,5 +21,7 @@ cv2.drawContours(original, contornos, -1, (0, 0, 255), 2)
 # cv2.imshow("canny",canny)
 # cv2.imshow("cierre",cierre)
 
+
 cv2.imshow("Resultado", original)
 cv2.waitKey(0)
+cv2.destroyAllWindows()
