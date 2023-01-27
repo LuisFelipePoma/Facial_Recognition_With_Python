@@ -35,7 +35,7 @@ capturavideo = cv2.VideoCapture(0)
 
 while True:
     tipocamara, camara = capturavideo.read()
-    if not tipocamara:
+    if tipocamara == False:
         break
     imagen_A6 = alineamiento(camara, ancho=480, alto=640)
     if imagen_A6 is not None:
@@ -51,7 +51,7 @@ while True:
         for c_2 in contorno2:
             area = cv2.contourArea(c_2)
             Momentos = cv2.moments(c_2)
-            if Momentos["m00"] == 0:
+            if (Momentos["m00"] == 0):
                 Momentos["m00"] = 1.0
             x = int(Momentos["m10"] / Momentos["m00"])
             y = int(Momentos["m01"] / Momentos["m00"])
