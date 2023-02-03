@@ -3,13 +3,15 @@ import os
 
 import imutils
 
-modelo = 'FotosYo'
+modelo = 'FotosAuron'
 ruta1 = 'C:/Users/pms_l/Documents/Cursos/Reconocimiento Facial - Python/Codes/reconocimientofacial1'
 rutaCompleta = ruta1 + '/' + modelo
 if not os.path.exists(rutaCompleta):
     os.mkdir(rutaCompleta)
 
-camara = cv.VideoCapture(0)
+# camara = cv.VideoCapture(0)
+camara = cv.VideoCapture("videoauron.mp4")
+
 ruidos = cv.CascadeClassifier(
     'C:\\Users\pms_l\Documents\Cursos\Reconocimiento Facial - Python\Material\opencv\data\haarcascades\haarcascade_frontalface_default.xml')
 
